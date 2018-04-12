@@ -1,0 +1,28 @@
+<section class="success" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>About</h2>
+        <hr class="star-light">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-2">
+        <p>
+          Backend ruby/rails developer experienced in kanban/agile development. I have a growth mind set and am highly focused on self-development.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          I am passionate about following high coding standards and building well-tested apps which follow best practices in testing.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+      <a href="#" class="btn btn-lg btn-outline">
+        <i class="fa fa-download"></i>
+        Download CV (PDF)
+      </a>
+    </div>
+  </div>
+</section>

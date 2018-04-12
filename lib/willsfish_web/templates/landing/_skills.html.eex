@@ -1,0 +1,56 @@
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Skills</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="dark hovereffect">
+                  <%= img_tag "/images/freelancer/skills/ruby.png", class: "img-responsive", alt: "" %>
+                  <div class="overlay">
+                     <h2>Ruby Programming</h2>
+                     <a class="info" href="https://www.ruby-lang.org/en/">Learn About Ruby</a>
+                     <p>Ruby is a dynamic programming language suited to building well-tested, reliable and modular web applications.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="light hovereffect">
+                    <%= img_tag "/images/freelancer/skills/golang.png", class: "img-responsive", alt: "" %>
+                    <!-- <div class="overlay">
+                       <h2>Test Driven Development</h2>
+                       <a class="info" href="https://en.wikipedia.org/wiki/Test-driven_development">Learn About Test Driven Development</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="dark hovereffect">
+                    <%= img_tag "/images/freelancer/skills/rails.png", class: "img-responsive", alt: "" %>
+                    <div class="overlay">
+                       <h2>Rails Web Development</h2>
+                       <a class="info" href="http://rubyonrails.org/">Learn More About Rails</a>
+                       <p>Rails is a widely-used web development framework developed to build highly maintainable and reliable sophisticated web apps.<p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="dark hovereffect">
+                <%= img_tag "/images/freelancer/skills/postgres.png", class: "img-responsive", alt: "" %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="light hovereffect">
+                    <%= img_tag "/images/freelancer/skills/javascript.png", class: "img-responsive", alt: "" %>
+                </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="dark hovereffect">
+                <%= img_tag "/images/freelancer/skills/aws.png", class: "img-responsive", alt: "" %>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>

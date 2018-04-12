@@ -1,0 +1,8 @@
+<%= render "_navigation.html", conn: @conn %>
+<%= render "_header.html", conn: @conn %>
+<%= render "_portfolio.html", conn: @conn %>
+<%= render "_skills.html", conn: @conn %>
+<%= render "_about.html", conn: @conn %>
+<%= render "_contact.html", conn: @conn %>
+<%= render "_footer.html", conn: @conn %>
+<%= render "_mydrive_modal.html", conn: @conn %>

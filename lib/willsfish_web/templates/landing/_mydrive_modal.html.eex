@@ -1,0 +1,92 @@
+<div class="portfolio-modal modal fade" id="portfolioMyDrive" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>MyDrive</h2>
+                        <hr class="star-primary">
+                        <%= img_tag "/images/freelancer/portfolio/mydrive.png", class: "img-responsive", alt: "" %>
+                        <p>MyDrive provides an end-to-end insurance telematics solution which enables insurers to fully understand the way their policyholders drive and therefore infer the risk they represent.</p>
+                        <p>I maintain several core code repositories for MyDrive, including:</p>
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action active">
+                            <h5 class="list-group-item-heading">Operations Pipeline</h5>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Description</h5>
+                            <p class="list-group-item-text">
+                              The operations pipeline injests, transforms, classifies and scores trips. It's principal output (the profile) gives an overall picture of a drivers key competencies.
+                            </p>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Technologies</h5>
+                            <p class="list-group-item-text">Ruby, Redis, Cassandra, PostgreSQL, SQLite, Rspec</p>
+                          </a>
+                        </div>
+
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action active">
+                            <h5 class="list-group-item-heading">MyDrive's Core API</h5>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Description</h5>
+                            <p class="list-group-item-text">
+                              MyDrive's API gives client's access to the valuable information output by the operations pipeline.
+
+                              The API's contained in this project are RESTful and well-tested using rspec-rails.
+                            </p>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Technologies</h5>
+                            <p class="list-group-item-text">Rails, Ruby, Sinatra, Cassandra, PostgreSQL, Redis, RSpec, Cucumber</p>
+                          </a>
+                        </div>
+
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action active">
+                            <h5 class="list-group-item-heading">Insurer's Portal</h5>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Description</h5>
+                            <p class="list-group-item-text">
+                              The Insurer's Portal acts as a frontend for insurer's customer services and phones seeking to access MyDrive's
+                              profiling service.
+                            </p>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Technologies</h5>
+                            <p class="list-group-item-text">Rails, Ruby, Sinatra, Redis, RSpec, Capybara Webkit, AWS</p>
+                          </a>
+                        </div>
+
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action active">
+                            <h5 class="list-group-item-heading">Integration Tests</h5>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Description</h5>
+                            <p class="list-group-item-text">
+                              A framework I built from scratch to deeply drive and test the behaviour of the operations pipeline, the api
+                              and the insurer's portal projects.
+                            </p>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <h5 class="list-group-item-heading">Technologies</h5>
+                            <p class="list-group-item-text">Ruby, RSpec, aws-sdk</p>
+                          </a>
+                        </div>
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

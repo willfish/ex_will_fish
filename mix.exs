@@ -42,7 +42,7 @@ defmodule Willsfish.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:hedwig, "~> 1.0"},
-      {:coherence, "~> 0.5"}
+      {:coherence, "~> 0.5.0"}
     ]
   end
 

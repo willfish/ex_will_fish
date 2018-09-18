@@ -1,5 +1,6 @@
 defmodule WillsfishWeb.Router do
   use WillsfishWeb, :router
+  use Coherence.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -7,6 +8,16 @@ defmodule WillsfishWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Coherence.Authentication.Session, protected: false
+  end
+
+  pipeline :protected do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+    plug Coherence.Authentication.Session, protected: true
   end
 
   pipeline :api do
@@ -14,8 +25,13 @@ defmodule WillsfishWeb.Router do
   end
 
   scope "/", WillsfishWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
+    coherence_routes()
+  end
 
+  scope "/", WillsfishWeb do
+    pipe_through :protected
+    coherence_routes :protected
     get "/", LandingController, :index
   end
 end

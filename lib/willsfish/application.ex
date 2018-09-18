@@ -11,9 +11,10 @@ defmodule Willsfish.Application do
       # Start the Ecto repository
       supervisor(Willsfish.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(WillsfishWeb.Endpoint, []),
+      supervisor(WillsfishWeb.Endpoint, [])
       # Start your own worker by calling: Willsfish.Worker.start_link(arg1, arg2, arg3)
       # worker(Willsfish.Worker, [arg1, arg2, arg3]),
+      # worker(Willsfish.Robot, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

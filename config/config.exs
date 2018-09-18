@@ -5,6 +5,16 @@
 # is restricted to this project.
 use Mix.Config
 
+config :willsfish, Willsfish.Robot,
+  adapter: Hedwig.Adapters.Console,
+  name: "WillBot",
+  aka: "/",
+  responders: [
+    {Hedwig.Responders.Help, []},
+    {Hedwig.Responders.Ping, []}
+  ]
+
+
 # General application configuration
 config :willsfish,
   ecto_repos: [Willsfish.Repo]

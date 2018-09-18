@@ -27,11 +27,12 @@ defmodule WillsfishWeb.Router do
   scope "/", WillsfishWeb do
     pipe_through :browser
     coherence_routes()
+    get "/", LandingController, :index
   end
 
   scope "/", WillsfishWeb do
     pipe_through :protected
     coherence_routes :protected
-    get "/", LandingController, :index
+    resources "/chats", ChatController
   end
 end

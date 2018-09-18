@@ -1,0 +1,5 @@
+<%= if Coherence.logged_in?(@conn) do %>
+  <%= link "Sign out", to: session_path(@conn, :delete), method: :delete %>
+<%= else %>
+  <%= link "Sign in", to: session_path(@conn, :new), method: :get %>
+<% end %>

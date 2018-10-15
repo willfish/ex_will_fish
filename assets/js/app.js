@@ -18,9 +18,9 @@ import "phoenix_html"
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-// import socket from "./socket"
 //= require jquery
 //= require jquery_ujs
+import socket from "./socket"
 //= require turbolinks
 //= require_tree .
 //= require bootstrap

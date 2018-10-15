@@ -19,7 +19,20 @@
       <% end%>
 
       <div class="container">
-          <%= render @view_module, @view_template, assigns %>
+        <%= if Coherence.logged_in?(@conn) do %>
+          <script type="text/javascript">
+            <% token = Map.get(assigns, :token) %>
+            window.token = "<%= token %>"
+            window.user_name = "<%= Coherence.current_user(@conn).name %>"
+          </script>
+        <%= else %>
+          <script type="text/javascript">
+            window.token = ""
+            window.user_name = ""
+          </script>
+        <% end %>
+        <%= render @view_module, @view_template, assigns %>
+        <%= render "_footer.html", assigns %>
       </div>
 
 

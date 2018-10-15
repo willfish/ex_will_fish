@@ -9,6 +9,7 @@ defmodule WillsfishWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug Coherence.Authentication.Session, protected: false
+    plug :put_user_token
   end
 
   pipeline :protected do
@@ -18,6 +19,7 @@ defmodule WillsfishWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug Coherence.Authentication.Session, protected: true
+    plug :put_user_token
   end
 
   pipeline :api do
@@ -34,5 +36,17 @@ defmodule WillsfishWeb.Router do
     pipe_through :protected
     coherence_routes :protected
     resources "/chats", ChatController
+  end
+
+  defp put_user_token(conn, _) do
+    token = if Coherence.logged_in?(conn) do
+      Phoenix.Token.sign(
+        conn, "user id", Coherence.current_user(conn).id
+      )
+    else
+      ""
+    end
+
+    assign(conn, :token, token)
   end
 end

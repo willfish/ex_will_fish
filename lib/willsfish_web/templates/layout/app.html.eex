@@ -7,18 +7,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>William Fish</title>
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/manifest.css") %>">
   </head>
 
   <body id="page-top" class="index">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= if get_flash(@conn, :info) do %>
+        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <% end%>
+      <%= if get_flash(@conn, :error) do %>
+        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <% end%>
 
-      <main role="main">
+      <div class="container">
+        <%= if Coherence.logged_in?(@conn) do %>
+          <script type="text/javascript">
+            <% token = Map.get(assigns, :token) %>
+            window.token = "<%= token %>"
+            window.user_name = "<%= Coherence.current_user(@conn).name %>"
+          </script>
+        <%= else %>
+          <script type="text/javascript">
+            window.token = ""
+            window.user_name = ""
+          </script>
+        <% end %>
         <%= render @view_module, @view_template, assigns %>
-      </main>
+        <%= render "_footer.html", assigns %>
+      </div>
+
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
